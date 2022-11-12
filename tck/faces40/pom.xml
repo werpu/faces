@@ -32,12 +32,10 @@
     <name>Jakarta Faces TCK ${project.version} - Test - Faces 4.0</name>
 
     <modules>
-
-          <module>ajax</module>
+        <module>ajax</module>
         <module>extensionless-mapping</module>
-        
         <module>doctype</module>
-
+        <module>externalContext</module>
         <module>inputFile</module>
         <module>inputText</module>
         <module>namespaces</module>
