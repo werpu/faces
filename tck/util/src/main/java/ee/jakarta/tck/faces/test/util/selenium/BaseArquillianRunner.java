@@ -21,21 +21,21 @@ import org.junit.runners.model.FrameworkMethod;
 import org.junit.runners.model.InitializationError;
 
 /**
- * Arquilian runner, which uses
- * the extended Selenium Chrome Webdriver
- * Enables itself, if -Dtest.selenium=true is
- * passed as environment parameter
+ * Standard Arquillian runner, which triggers the
+ * default combined Arquillian/HTMLUnit based test System if
+ * test.selenium-only is not set as system property
  */
-public class SeleniumArquilianRunner extends Arquillian {
-    public SeleniumArquilianRunner(Class<?> testClass) throws InitializationError {
+public class BaseArquillianRunner extends Arquillian {
+    public BaseArquillianRunner(Class<?> testClass) throws InitializationError {
         super(testClass);
     }
 
     @Override
     protected boolean isIgnored(FrameworkMethod child) {
-        if(!"true".equals(System.getProperty("test.selenium"))) {
+        if("true".equals(System.getProperty("test.selenium-only"))) {
             return true;
         }
         return super.isIgnored(child);
     }
+
 }
