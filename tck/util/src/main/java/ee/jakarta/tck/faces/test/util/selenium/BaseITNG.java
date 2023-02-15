@@ -18,6 +18,7 @@
 package ee.jakarta.tck.faces.test.util.selenium;
 
 import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.importer.ZipImporter;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
@@ -38,7 +39,7 @@ import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
  * which provides a certain infrastructure
  * can be used, but does not have to be
  */
-@RunWith(SeleniumArquilianRunner.class)
+@RunWith(Arquillian.class)
 public class BaseITNG {
 
     @ArquillianResource

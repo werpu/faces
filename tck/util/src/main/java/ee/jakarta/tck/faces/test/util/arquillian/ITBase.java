@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseArquilianRunner;
+import ee.jakarta.tck.faces.test.util.selenium.BaseArquillianRunner;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.importer.ZipImporter;
@@ -22,7 +22,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import ee.jakarta.tck.faces.test.util.htmlunit.DebugOptions;
 import ee.jakarta.tck.faces.test.util.htmlunit.IgnoringIncorrectnessListener;
 
-@RunWith(BaseArquilianRunner.class)
+@RunWith(BaseArquillianRunner.class)
 public abstract class ITBase {
 
     @ArquillianResource

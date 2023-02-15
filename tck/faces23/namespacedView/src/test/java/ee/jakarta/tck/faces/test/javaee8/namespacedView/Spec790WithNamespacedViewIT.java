@@ -23,7 +23,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.net.URL;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseArquilianRunner;
+import ee.jakarta.tck.faces.test.util.selenium.BaseArquillianRunner;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.importer.ZipImporter;
@@ -44,7 +44,7 @@ import jakarta.faces.application.NavigationHandler;
 import jakarta.faces.application.StateManager;
 import jakarta.faces.component.NamingContainer;
 
-@RunWith(BaseArquilianRunner.class)
+@RunWith(BaseArquillianRunner.class)
 public class Spec790WithNamespacedViewIT {
 
     @ArquillianResource

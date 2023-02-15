@@ -23,7 +23,7 @@ import static org.junit.Assert.assertEquals;
 import java.io.File;
 import java.net.URL;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseArquilianRunner;
+import ee.jakarta.tck.faces.test.util.selenium.BaseArquillianRunner;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.importer.ZipImporter;
@@ -40,7 +40,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.component.behavior.AjaxBehavior;
 
-@RunWith(BaseArquilianRunner.class)
+@RunWith(BaseArquillianRunner.class)
 public class Spec1567IT {
 
     @ArquillianResource
