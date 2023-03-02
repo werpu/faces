@@ -23,13 +23,13 @@ import org.junit.Test;
 import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.behavior.AjaxBehavior;
 
 /**
  * @author Manfred Riem (manfred.riem@oracle.com)
  */
-public class Issue2041IT extends ITBase {
+public class Issue2041IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see AjaxBehavior

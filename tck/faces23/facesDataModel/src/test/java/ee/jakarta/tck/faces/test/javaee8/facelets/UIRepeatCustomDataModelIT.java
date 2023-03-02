@@ -17,20 +17,18 @@
 
 package ee.jakarta.tck.faces.test.javaee8.facelets;
 
-import static java.util.regex.Pattern.matches;
-import static org.junit.Assert.assertTrue;
-
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
+import jakarta.faces.model.FacesDataModel;
 import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
-import jakarta.faces.model.FacesDataModel;
+import static java.util.regex.Pattern.matches;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(Arquillian.class)
-public class UIRepeatCustomDataModelIT extends ITBase {
+public class UIRepeatCustomDataModelIT extends ITBaseAll {
 
     /**
      * @see com.sun.faces.facelets.component.UIRepeat

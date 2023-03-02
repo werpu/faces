@@ -17,25 +17,18 @@
 
 package ee.jakarta.tck.faces.test.javaee8.uiinput;
 
+import com.gargoylesoftware.htmlunit.html.*;
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
+import jakarta.faces.component.UISelectItem;
+import jakarta.faces.component.html.HtmlSelectManyCheckbox;
+import org.junit.Test;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import org.jboss.arquillian.junit.Arquillian;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import com.gargoylesoftware.htmlunit.html.HtmlButtonInput;
-import com.gargoylesoftware.htmlunit.html.HtmlCheckBoxInput;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.gargoylesoftware.htmlunit.html.HtmlRadioButtonInput;
-import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
-
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
-import jakarta.faces.component.UISelectItem;
-import jakarta.faces.component.html.HtmlSelectManyCheckbox;
-
-@RunWith(Arquillian.class)
-public class Issue4330IT extends ITBase {
+public class Issue4330IT extends ITBaseAll {
 
     /**
      * @see HtmlSelectManyCheckbox

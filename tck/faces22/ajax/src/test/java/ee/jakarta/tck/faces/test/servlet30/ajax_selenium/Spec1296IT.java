@@ -16,14 +16,14 @@
 
 package ee.jakarta.tck.faces.test.servlet30.ajax_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.context.PartialResponseWriter;
 import org.junit.Test;
 
 import static org.junit.Assert.fail;
 
-public class Spec1296IT extends BaseITNG {
+public class Spec1296IT extends ITBaseWebDriverOnly {
 
     /**
      * @see PartialResponseWriter

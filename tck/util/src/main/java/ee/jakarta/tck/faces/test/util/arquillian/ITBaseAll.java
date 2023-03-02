@@ -1,14 +1,12 @@
 package ee.jakarta.tck.faces.test.util.arquillian;
 
-import static java.lang.System.getProperty;
-import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import ee.jakarta.tck.faces.test.util.htmlunit.DebugOptions;
+import ee.jakarta.tck.faces.test.util.htmlunit.IgnoringIncorrectnessListener;
 import ee.jakarta.tck.faces.test.util.selenium.BaseArquilianRunner;
 import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.importer.ZipImporter;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
@@ -16,14 +14,18 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 
-import ee.jakarta.tck.faces.test.util.htmlunit.DebugOptions;
-import ee.jakarta.tck.faces.test.util.htmlunit.IgnoringIncorrectnessListener;
+import static java.lang.System.getProperty;
+import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
 
-@RunWith(BaseArquilianRunner.class)
-public abstract class ITBase {
+/**
+ * Base class to run every time the tests are triggered
+ */
+@RunWith(Arquillian.class)
+public abstract class ITBaseAll {
 
     @ArquillianResource
     protected URL webUrl;

@@ -18,19 +18,19 @@ package ee.jakarta.tck.faces.test.servlet30.ajax;
 
 import static org.junit.Assert.assertEquals;
 
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import org.junit.Test;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.component.behavior.AjaxBehavior;
 
 /**
  * @author Manfred Riem (manfred.riem@oracle.com)
  */
-public class Issue1825IT extends ITBase {
+public class Issue1825IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see AjaxBehavior

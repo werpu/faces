@@ -23,11 +23,11 @@ import org.junit.Test;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSpan;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.behavior.ClientBehaviorHolder;
 import jakarta.faces.component.html.HtmlPanelGroup;
 
-public class Issue1957IT extends ITBase {
+public class Issue1957IT extends ITBaseHTMLUnitOnly {
     
     /**
      * @see ClientBehaviorHolder

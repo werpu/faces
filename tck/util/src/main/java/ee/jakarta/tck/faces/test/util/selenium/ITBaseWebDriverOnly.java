@@ -39,7 +39,7 @@ import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
  * can be used, but does not have to be
  */
 @RunWith(SeleniumArquilianRunner.class)
-public class BaseITNG {
+public class ITBaseWebDriverOnly {
 
     @ArquillianResource
     protected URL webUrl;

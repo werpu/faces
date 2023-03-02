@@ -39,28 +39,12 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
 import jakarta.el.ResourceBundleELResolver;
 
-@RunWith(Arquillian.class)
-public class Spec1337IT {
 
-    @ArquillianResource
-    private URL webUrl;
-    private WebClient webClient;
-
-    @Deployment(testable = false)
-    public static WebArchive createDeployment() {
-        return create(ZipImporter.class, getProperty("finalName") + ".war")
-                .importFrom(new File("target/" + getProperty("finalName") + ".war"))
-                .as(WebArchive.class);
-    }
+public class Spec1337IT extends ITBaseAll {
 
     @Before
     public void setUp() {
         webClient = new WebClient();
-    }
-
-    @After
-    public void tearDown() {
-        webClient.close();
     }
 
     /**

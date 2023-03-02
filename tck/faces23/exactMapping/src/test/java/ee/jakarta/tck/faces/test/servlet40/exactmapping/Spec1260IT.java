@@ -24,6 +24,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.net.URL;
 
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import ee.jakarta.tck.faces.test.util.selenium.BaseArquilianRunner;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.test.api.ArquillianResource;
@@ -40,29 +41,11 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import jakarta.faces.application.Resource;
 import jakarta.faces.application.ViewHandler;
 
-@RunWith(BaseArquilianRunner.class)
-public class Spec1260IT {
-
-    @ArquillianResource
-    private URL webUrl;
-    private WebClient webClient;
-
-    @Deployment(testable = false)
-    public static WebArchive createDeployment() {
-        return create(ZipImporter.class, getProperty("finalName") + ".war")
-                .importFrom(new File("target/" + getProperty("finalName") + ".war"))
-                .as(WebArchive.class);
-    }
-
+public class Spec1260IT extends ITBaseHTMLUnitOnly {
 
     @Before
     public void setUp() {
         webClient = new WebClient();
-    }
-
-    @After
-    public void tearDown() {
-        webClient.close();
     }
 
     /**

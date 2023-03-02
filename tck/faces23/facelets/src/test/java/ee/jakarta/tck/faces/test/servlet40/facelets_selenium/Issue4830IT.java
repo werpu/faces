@@ -17,7 +17,7 @@
 
 package ee.jakarta.tck.faces.test.servlet40.facelets_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.ExtendedWebDriver;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.component.EditableValueHolder;
@@ -33,7 +33,7 @@ import java.time.Duration;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Arquillian.class)
-public class Issue4830IT extends BaseITNG {
+public class Issue4830IT extends ITBaseWebDriverOnly {
 
     /**
      * @see com.sun.faces.facelets.component.UIRepeat

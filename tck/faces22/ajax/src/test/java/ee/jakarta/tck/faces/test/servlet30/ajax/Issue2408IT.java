@@ -21,6 +21,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import org.junit.Test;
 
 import com.gargoylesoftware.htmlunit.html.DomElement;
@@ -29,12 +30,11 @@ import com.gargoylesoftware.htmlunit.html.HtmlCheckBoxInput;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlRadioButtonInput;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.component.behavior.AjaxBehavior;
 import jakarta.faces.component.html.HtmlSelectManyCheckbox;
 
-public class Issue2408IT extends ITBase {
+public class Issue2408IT extends ITBaseHTMLUnitOnly {
 
     /**
      * This test verifies correct function of SelectManyCheckbox in a Composite

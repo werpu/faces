@@ -29,9 +29,9 @@ import com.gargoylesoftware.htmlunit.html.DomNodeList;
 import com.gargoylesoftware.htmlunit.html.HtmlCheckBoxInput;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 
-public class Issue1581IT extends ITBase {
+public class Issue1581IT extends ITBaseHTMLUnitOnly {
 
     /**
      * This test verifies correct function of SelectManyCheckbox in a Composite

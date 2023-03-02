@@ -18,15 +18,15 @@ package ee.jakarta.tck.faces.test.servlet30.ajax;
 
 import static org.junit.Assert.assertEquals;
 
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import org.junit.Test;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
 import jakarta.faces.component.behavior.AjaxBehavior;
 
-public class Issue3261IT extends ITBase {
+public class Issue3261IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see AjaxBehavior

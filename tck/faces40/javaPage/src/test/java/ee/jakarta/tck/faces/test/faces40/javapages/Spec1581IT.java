@@ -22,6 +22,7 @@ import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
 import java.io.File;
 import java.net.URL;
 
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
@@ -40,29 +41,12 @@ import ee.jakarta.tck.faces.test.util.htmlunit.DebugOptions;
 import jakarta.faces.annotation.View;
 import jakarta.faces.view.facelets.Facelet;
 
-@RunWith(Arquillian.class)
-public class Spec1581IT {
-
-    @ArquillianResource
-    private URL webUrl;
-    private WebClient webClient;
-
-    @Deployment(testable = false)
-    public static WebArchive createDeployment() {
-        return create(ZipImporter.class, getProperty("finalName") + ".war")
-                .importFrom(new File("target/" + getProperty("finalName") + ".war"))
-                .as(WebArchive.class);
-    }
+public class Spec1581IT extends ITBaseAll {
 
     @Before
     public void setUp() {
         webClient = new WebClient();
         DebugOptions.setDebugOptions(webClient);
-    }
-
-    @After
-    public void tearDown() {
-        webClient.close();
     }
 
     /**

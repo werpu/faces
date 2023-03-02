@@ -1,12 +1,12 @@
 package ee.jakarta.tck.faces.test.javaee8.ajax_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import org.eu.ingwar.tools.arquillian.extension.suite.annotations.ArquillianSuiteDeployment;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 
 /**
- * Given Arquilian has no single deployment testsuite
+ * Given Arquillian has no single deployment testsuite
  * mechanism we have to rely on a third party library.
  * This improves the performance in a major area, namely
  * we are only deploying once and then run all tests
@@ -16,7 +16,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 public class Deployments {
     @Deployment(testable = false)
     public static WebArchive createDeployment() {
-        return BaseITNG.createDeployment();
+        return ITBaseWebDriverOnly.createDeployment();
     }
 }
 

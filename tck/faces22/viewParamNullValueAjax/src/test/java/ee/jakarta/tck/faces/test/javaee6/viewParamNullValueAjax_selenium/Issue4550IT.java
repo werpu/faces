@@ -17,7 +17,7 @@
 
 package ee.jakarta.tck.faces.test.javaee6.viewParamNullValueAjax_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.ExtendedWebDriver;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.component.UIViewParameter;
@@ -28,7 +28,7 @@ import org.openqa.selenium.WebElement;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-public class Issue4550IT extends BaseITNG {
+public class Issue4550IT extends ITBaseWebDriverOnly {
 
     private static String TEST_STRING = "Test Rhuan";
 

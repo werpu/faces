@@ -23,11 +23,11 @@ import org.junit.Test;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.context.ExceptionHandler;
 import jakarta.faces.context.PartialViewContext;
 
-public class Issue2179IT extends ITBase {
+public class Issue2179IT extends ITBaseHTMLUnitOnly {
     
     /**
      * @see PartialViewContext

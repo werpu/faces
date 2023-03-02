@@ -24,11 +24,11 @@ import org.junit.Ignore;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSelect;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.behavior.AjaxBehavior;
 
 @Ignore("ignored at the request by the myfaces community -- See https://github.com/jakartaee/faces/issues/1757")
-public class Issue3833IT extends ITBase {
+public class Issue3833IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see AjaxBehavior

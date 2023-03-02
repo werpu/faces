@@ -17,44 +17,18 @@
 package ee.jakarta.tck.faces.test.javaee8.searchExpression;
 
 
-import static java.lang.System.getProperty;
-import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
-
-import java.io.File;
-import java.net.URL;
-
-import ee.jakarta.tck.faces.test.util.selenium.BaseArquilianRunner;
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.arquillian.test.api.ArquillianResource;
-import org.jboss.shrinkwrap.api.importer.ZipImporter;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlLabel;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
-
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.search.SearchKeywordResolver;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
-@RunWith(BaseArquilianRunner.class)
-public class Spec1238IT {
-
-    @ArquillianResource
-    private URL webUrl;
-    private WebClient webClient;
-
-    @Deployment(testable = false)
-    public static WebArchive createDeployment() {
-        return create(ZipImporter.class, getProperty("finalName") + ".war")
-                .importFrom(new File("target/" + getProperty("finalName") + ".war"))
-                .as(WebArchive.class);
-    }
+public class Spec1238IT extends ITBaseHTMLUnitOnly {
 
     @Before
     public void setUp() {
@@ -95,9 +69,5 @@ public class Spec1238IT {
         Assert.assertTrue(onchange.contains("spec1238ITinput2"));
     }
 
-    @After
-    public void tearDown() {
-        webClient.close();
-    }
 
 }

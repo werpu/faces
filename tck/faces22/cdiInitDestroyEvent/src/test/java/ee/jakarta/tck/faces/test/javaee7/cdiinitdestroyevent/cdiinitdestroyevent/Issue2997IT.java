@@ -24,6 +24,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.net.URL;
 
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
@@ -44,29 +45,9 @@ import jakarta.faces.flow.FlowScoped;
 // https://github.com/eclipse-ee4j/mojarra/issues/3001
 // https://github.com/jakartaee/faces/issues/1734
 @Ignore("Depends on non-specified abandoned flow and @Initialized")
-@RunWith(Arquillian.class)
-public class Issue2997IT {
+public class Issue2997IT extends ITBaseAll {
 
-    @ArquillianResource
-    private URL webUrl;
-    private WebClient webClient;
 
-    @Deployment(testable = false)
-    public static WebArchive createDeployment() {
-        return create(ZipImporter.class, getProperty("finalName") + ".war")
-                .importFrom(new File("target/" + getProperty("finalName") + ".war"))
-                .as(WebArchive.class);
-    }
-
-    @Before
-    public void setUp() {
-        webClient = new WebClient();
-    }
-
-    @After
-    public void tearDown() {
-        webClient.close();
-    }
 
     /**
      * @see FlowScoped

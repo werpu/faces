@@ -16,14 +16,14 @@
 
 package ee.jakarta.tck.faces.test.javaee8.cdi_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.component.behavior.FacesBehavior;
 import jakarta.inject.Inject;
 import org.junit.Test;
 
 
-public class Spec1351IT extends BaseITNG {
+public class Spec1351IT extends ITBaseWebDriverOnly {
 
     /**
      * @see Inject

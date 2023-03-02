@@ -19,18 +19,15 @@ package ee.jakarta.tck.faces.test.servlet30.compositeComponent;
 
 import static org.junit.Assert.assertEquals;
 
-import org.jboss.arquillian.junit.Arquillian;
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
 import jakarta.faces.component.UIViewRoot;
 
-@RunWith(Arquillian.class)
-public class Issue5065IT extends ITBase {
+public class Issue5065IT extends ITBaseAll {
 
     /**
      * @see UIViewRoot#findComponent(String)

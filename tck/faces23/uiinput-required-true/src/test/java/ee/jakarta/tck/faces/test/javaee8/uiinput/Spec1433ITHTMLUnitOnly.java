@@ -15,41 +15,44 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  */
 
-package ee.jakarta.tck.faces.test.javaee8.flash;
+package ee.jakarta.tck.faces.test.javaee8.uiinput;
 
 import static org.junit.Assert.assertTrue;
 
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
 import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
+import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
-import jakarta.faces.context.Flash;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
+import jakarta.faces.component.UIInput;
 
-@RunWith(Arquillian.class)
-public class Issue4167IT extends ITBase {
+public class Spec1433ITHTMLUnitOnly extends ITBaseAll {
 
     /**
-     * @see Flash#keep(String)
-     * @see https://github.com/eclipse-ee4j/mojarra/issues/4171
+     * @see UIInput#ALWAYS_PERFORM_VALIDATION_WHEN_REQUIRED_IS_TRUE
+     * @see https://github.com/jakartaee/faces/issues/1433
      */
     @Test
-    public void test() throws Exception {
-        HtmlPage page = getPage("issue4167.xhtml");
+    public void testSpec1433() throws Exception {
+        HtmlPage page = getPage("spec1433.xhtml");
+        HtmlTextInput input = (HtmlTextInput) page.getElementById("form:input");
+        input.setAttribute("id", "");
+        input.setAttribute("name", "");
+        input.setValueAttribute("non-empty value");
 
-        assertTrue(page.getHtmlElementById("result1").asNormalizedText().isEmpty());
-        assertTrue(page.getHtmlElementById("result2").asNormalizedText().isEmpty());
-        assertTrue(page.getHtmlElementById("result3").asNormalizedText().isEmpty());
+        HtmlSubmitInput button = (HtmlSubmitInput) page.getHtmlElementById("form:submit");
 
-        HtmlSubmitInput button = (HtmlSubmitInput) page.getHtmlElementById("form:button");
         page = button.click();
 
-        assertTrue(page.getHtmlElementById("result1").asNormalizedText().equals("issue4167"));
-        assertTrue(page.getHtmlElementById("result2").asNormalizedText().equals("issue4167"));
-        assertTrue(page.getHtmlElementById("result3").asNormalizedText().equals("issue4167"));
+        String output = page.asNormalizedText();
+
+        assertTrue(output.contains("Spec1433Bean Validator Message"));
+
     }
 
 }

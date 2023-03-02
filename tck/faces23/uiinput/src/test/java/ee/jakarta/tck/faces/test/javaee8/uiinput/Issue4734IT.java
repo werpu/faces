@@ -16,19 +16,15 @@
  */
 package ee.jakarta.tck.faces.test.javaee8.uiinput;
 
-import org.jboss.arquillian.junit.Arquillian;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
-
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.UIViewParameter;
 import jakarta.faces.component.behavior.AjaxBehavior;
+import org.junit.Test;
 
-@RunWith(Arquillian.class)
-public class Issue4734IT extends ITBase {
+public class Issue4734IT extends ITBaseAll {
 
     /**
      * @see UIViewParameter

@@ -23,11 +23,11 @@ import org.junit.Test;
 import com.gargoylesoftware.htmlunit.html.HtmlCheckBoxInput;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.behavior.AjaxBehavior;
 import jakarta.faces.component.html.HtmlSelectManyCheckbox;
 
-public class Issue2422IT extends ITBase {
+public class Issue2422IT extends ITBaseHTMLUnitOnly {
 
     /**
      * This test verifies correct function of SelectManyCheckbox in a Composite

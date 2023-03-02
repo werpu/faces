@@ -16,14 +16,14 @@
 
 package ee.jakarta.tck.faces.test.servlet30.ajax_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.component.behavior.AjaxBehavior;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class Issue2443IT extends BaseITNG {
+public class Issue2443IT extends ITBaseWebDriverOnly {
 
     /**
      * @see AjaxBehavior

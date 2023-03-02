@@ -18,16 +18,16 @@ package ee.jakarta.tck.faces.test.servlet30.ajax;
 
 import static org.junit.Assert.assertTrue;
 
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import org.junit.Test;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
 import jakarta.faces.component.behavior.AjaxBehavior;
 import jakarta.faces.component.html.HtmlCommandButton;
 
-public class Issue2407IT extends ITBase {
+public class Issue2407IT extends ITBaseHTMLUnitOnly {
 
     /**
      * This test verifies that an attribute named 'value' can be successfully updated

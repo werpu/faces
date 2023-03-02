@@ -29,6 +29,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.Temporal;
 import java.util.Locale;
 
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
@@ -48,30 +49,13 @@ import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
 import jakarta.faces.convert.DateTimeConverter;
 
 
-@RunWith(Arquillian.class)
-public class Issue4070IT {
-
-    @ArquillianResource
-    private URL webUrl;
-    private WebClient webClient;
-
-    @Deployment(testable = false)
-    public static WebArchive createDeployment() {
-        return create(ZipImporter.class, getProperty("finalName") + ".war")
-                .importFrom(new File("target/" + getProperty("finalName") + ".war"))
-                .as(WebArchive.class);
-    }
+public class Issue4070IT extends ITBaseAll {
 
     @Before
     public void setUp() {
         webClient = new WebClient();
         webClient.getOptions().setTimeout(900_000);
         webClient.addRequestHeader("Accept-Language", "en-US");
-    }
-
-    @After
-    public void tearDown() {
-        webClient.close();
     }
 
     /**

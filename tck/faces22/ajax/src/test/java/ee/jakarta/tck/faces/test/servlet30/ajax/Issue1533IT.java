@@ -23,14 +23,14 @@ import org.junit.Test;
 import com.gargoylesoftware.htmlunit.html.HtmlInput;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.behavior.AjaxBehavior;
 import jakarta.faces.component.html.HtmlSelectOneRadio;
 
 /**
  * @author Manfred Riem (manfred.riem@oracle.com)
  */
-public class Issue1533IT extends ITBase {
+public class Issue1533IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see AjaxBehavior

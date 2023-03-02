@@ -25,6 +25,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.net.URL;
 
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
@@ -42,19 +43,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
 
 import jakarta.faces.component.UIWebsocket;
 
-@RunWith(Arquillian.class)
-public class Issue4332IT {
-
-    @ArquillianResource
-    private URL webUrl;
-    private WebClient webClient;
-
-    @Deployment(testable = false)
-    public static WebArchive createDeployment() {
-        return create(ZipImporter.class, getProperty("finalName") + ".war")
-                .importFrom(new File("target/" + getProperty("finalName") + ".war"))
-                .as(WebArchive.class);
-    }
+public class Issue4332IT extends ITBaseAll {
 
     @Before
     public void setUp() {
@@ -91,9 +80,6 @@ public class Issue4332IT {
         webClient.close(); // This will explicitly close websocket as well. HtmlUnit doesn't seem to like to leave it open before loading next page.
     }
 
-    @After
-    public void tearDown() {
-        webClient.close();
-    }
+
 
 }

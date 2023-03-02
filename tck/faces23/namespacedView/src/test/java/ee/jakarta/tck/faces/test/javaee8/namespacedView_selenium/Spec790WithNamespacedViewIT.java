@@ -17,7 +17,7 @@
 package ee.jakarta.tck.faces.test.javaee8.namespacedView_selenium;
 
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -28,7 +28,7 @@ import java.time.Duration;
 import static org.junit.Assert.assertTrue;
 
 
-public class Spec790WithNamespacedViewIT extends BaseITNG {
+public class Spec790WithNamespacedViewIT extends ITBaseWebDriverOnly {
 
 
 

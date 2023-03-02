@@ -17,12 +17,10 @@
 
 package ee.jakarta.tck.faces.test.javaee8.ajax_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.component.html.HtmlOutputText;
-import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -31,7 +29,7 @@ import java.time.Duration;
 import static org.junit.Assert.assertTrue;
 
 
-public class Issue3981IT extends BaseITNG {
+public class Issue3981IT extends ITBaseWebDriverOnly {
 
     /**
      * @see HtmlOutputText#setEscape(boolean)

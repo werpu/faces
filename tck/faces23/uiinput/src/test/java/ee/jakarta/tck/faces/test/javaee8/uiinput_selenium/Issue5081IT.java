@@ -16,7 +16,7 @@
  */
 package ee.jakarta.tck.faces.test.javaee8.uiinput_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.ExtendedWebDriver;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.component.UIInput;
@@ -31,7 +31,7 @@ import java.time.Duration;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class Issue5081IT extends BaseITNG {
+public class Issue5081IT extends ITBaseWebDriverOnly {
 
     /**
      * @see UISelectMany

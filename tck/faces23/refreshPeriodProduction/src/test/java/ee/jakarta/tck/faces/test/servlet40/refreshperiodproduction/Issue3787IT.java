@@ -29,8 +29,7 @@ import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
 import jakarta.faces.application.ProjectStage;
 import jakarta.faces.application.ViewHandler;
 
-@RunWith(Arquillian.class)
-public class Issue3787IT extends ITBase  {
+public class Issue3787IT extends ITBaseAll  {
 
     /**
      * @see ViewHandler#FACELETS_REFRESH_PERIOD_PARAM_NAME

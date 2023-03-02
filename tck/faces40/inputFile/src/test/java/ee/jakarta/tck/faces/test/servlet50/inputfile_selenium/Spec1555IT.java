@@ -16,7 +16,7 @@
 
 package ee.jakarta.tck.faces.test.servlet50.inputfile_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.ExtendedWebDriver;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.component.html.HtmlInputFile;
@@ -35,7 +35,7 @@ import java.util.List;
 import static java.nio.file.StandardOpenOption.APPEND;
 import static org.junit.Assert.assertEquals;
 
-public class Spec1555IT extends BaseITNG {
+public class Spec1555IT extends ITBaseWebDriverOnly {
 
     /**
      * @see HtmlInputFile#isMultiple()

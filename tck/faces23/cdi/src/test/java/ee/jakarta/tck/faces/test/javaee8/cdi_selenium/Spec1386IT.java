@@ -16,7 +16,7 @@
 
 package ee.jakarta.tck.faces.test.javaee8.cdi_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.ExtendedWebDriver;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.annotation.FlowMap;
@@ -29,7 +29,7 @@ import org.openqa.selenium.By;
  *
  */
 
-public class Spec1386IT extends BaseITNG {
+public class Spec1386IT extends ITBaseWebDriverOnly {
 
     /**
      * @see Inject

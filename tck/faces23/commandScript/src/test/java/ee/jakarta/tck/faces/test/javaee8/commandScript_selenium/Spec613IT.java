@@ -17,7 +17,7 @@
 
 package ee.jakarta.tck.faces.test.javaee8.commandScript_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.ExtendedWebDriver;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.component.html.HtmlCommandScript;
@@ -29,7 +29,7 @@ import java.time.Duration;
 import static org.junit.Assert.assertTrue;
 
 
-public class Spec613IT extends BaseITNG {
+public class Spec613IT extends ITBaseWebDriverOnly {
 
     /**
      * @see HtmlCommandScript

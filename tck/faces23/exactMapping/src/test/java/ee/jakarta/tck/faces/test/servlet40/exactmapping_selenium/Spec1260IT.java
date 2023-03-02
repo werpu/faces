@@ -17,19 +17,17 @@
 
 package ee.jakarta.tck.faces.test.servlet40.exactmapping_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.application.Resource;
 import jakarta.faces.application.ViewHandler;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import java.time.Duration;
-
 import static org.junit.Assert.assertTrue;
 
 
-public class Spec1260IT extends BaseITNG {
+public class Spec1260IT extends ITBaseWebDriverOnly {
 
 
     /**

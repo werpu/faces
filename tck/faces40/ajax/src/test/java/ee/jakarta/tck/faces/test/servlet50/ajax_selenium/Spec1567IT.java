@@ -16,7 +16,7 @@
 
 package ee.jakarta.tck.faces.test.servlet50.ajax_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.ExtendedTextInput;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.component.UIComponent;
@@ -27,7 +27,7 @@ import org.openqa.selenium.By;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class Spec1567IT extends BaseITNG {
+public class Spec1567IT extends ITBaseWebDriverOnly {
 
 
 

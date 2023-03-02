@@ -19,16 +19,15 @@ package ee.jakarta.tck.faces.test.servlet40.facelets;
 
 import static org.junit.Assert.assertTrue;
 
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
-
-@RunWith(Arquillian.class)
-public class Spec1102IT extends ITBase {
+public class Spec1102IT extends ITBaseAll {
 
     /**
      * @see com.sun.faces.facelets.component.UIRepeat

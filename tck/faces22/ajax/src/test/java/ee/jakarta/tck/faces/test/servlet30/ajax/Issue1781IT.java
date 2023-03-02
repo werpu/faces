@@ -18,15 +18,15 @@ package ee.jakarta.tck.faces.test.servlet30.ajax;
 
 import static org.junit.Assert.assertEquals;
 
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import org.junit.Test;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
 import jakarta.faces.component.behavior.ClientBehaviorHolder;
 import jakarta.faces.component.html.HtmlBody;
 
-public class Issue1781IT extends ITBase {
+public class Issue1781IT extends ITBaseHTMLUnitOnly {
 
     /**
      * Test attaching a ClientBehaviorHolder to h:body. Note the current 2.1

@@ -20,15 +20,15 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import org.junit.Test;
 
 import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
 import jakarta.faces.component.behavior.AjaxBehavior;
 
-public class Issue2906IT extends ITBase {
+public class Issue2906IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see AjaxBehavior

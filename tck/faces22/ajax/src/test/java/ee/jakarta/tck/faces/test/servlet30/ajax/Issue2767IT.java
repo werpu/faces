@@ -24,10 +24,10 @@ import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlRadioButtonInput;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.behavior.AjaxBehavior;
 
-public class Issue2767IT extends ITBase {
+public class Issue2767IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see AjaxBehavior

@@ -17,7 +17,7 @@
 
 package ee.jakarta.tck.faces.test.javaee8.ajax_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.context.PartialViewContext;
 import org.junit.Test;
@@ -28,7 +28,7 @@ import java.time.Duration;
 
 import static org.junit.Assert.assertTrue;
 
-public class Spec1412IT extends BaseITNG {
+public class Spec1412IT extends ITBaseWebDriverOnly {
 
     /**
      * @see PartialViewContext#getEvalScripts()

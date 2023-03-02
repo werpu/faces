@@ -19,19 +19,16 @@ package ee.jakarta.tck.faces.test.servlet40.facelets;
 
 import static org.junit.Assert.assertTrue;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseArquilianRunner;
-import org.jboss.arquillian.junit.Arquillian;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
 import jakarta.faces.component.EditableValueHolder;
 import jakarta.faces.component.UIComponent;
 
-public class Issue4830IT extends ITBase {
+public class Issue4830IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see com.sun.faces.facelets.component.UIRepeat

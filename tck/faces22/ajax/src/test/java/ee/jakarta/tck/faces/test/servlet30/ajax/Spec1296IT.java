@@ -24,10 +24,10 @@ import org.junit.Test;
 
 import com.gargoylesoftware.htmlunit.Page;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.context.PartialResponseWriter;
 
-public class Spec1296IT extends ITBase {
+public class Spec1296IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see PartialResponseWriter

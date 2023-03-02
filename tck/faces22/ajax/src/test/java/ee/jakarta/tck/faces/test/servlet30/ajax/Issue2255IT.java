@@ -23,11 +23,11 @@ import org.junit.Test;
 import com.gargoylesoftware.htmlunit.html.HtmlCheckBoxInput;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.component.behavior.AjaxBehavior;
 
-public class Issue2255IT extends ITBase {
+public class Issue2255IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see AjaxBehavior

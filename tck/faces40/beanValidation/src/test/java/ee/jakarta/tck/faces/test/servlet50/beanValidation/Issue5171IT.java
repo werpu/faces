@@ -16,17 +16,14 @@
 
 package ee.jakarta.tck.faces.test.servlet50.beanValidation;
 
-import static org.junit.Assert.assertEquals;
-
-import org.jboss.arquillian.junit.Arquillian;
-import org.junit.Test;
-
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
+import org.junit.Test;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import static org.junit.Assert.assertEquals;
 
-public class Issue5171IT extends ITBase {
+public class Issue5171IT extends ITBaseAll {
 
     /**
      * @see https://github.com/eclipse-ee4j/mojarra/issues/5171

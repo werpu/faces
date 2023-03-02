@@ -17,19 +17,14 @@
 
 package ee.jakarta.tck.faces.test.javaee8.importConstants;
 
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
+import jakarta.faces.component.UIImportConstants;
+import org.junit.Test;
+
 import static org.junit.Assert.assertTrue;
 
-import org.jboss.arquillian.junit.Arquillian;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
-import jakarta.faces.component.UIImportConstants;
-
-@RunWith(Arquillian.class)
-public class Spec1424IT extends ITBase {
+public class Spec1424IT extends ITBaseAll {
 
     /**
      * @see UIImportConstants

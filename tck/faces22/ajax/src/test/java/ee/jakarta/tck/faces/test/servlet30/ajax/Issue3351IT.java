@@ -24,10 +24,10 @@ import org.junit.Test;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.behavior.AjaxBehavior;
 
-public class Issue3351IT extends ITBase {
+public class Issue3351IT extends ITBaseHTMLUnitOnly {
 
     /**
      * @see AjaxBehavior

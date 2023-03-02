@@ -18,6 +18,7 @@ package ee.jakarta.tck.faces.test.javaee8.cdi;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import ee.jakarta.tck.faces.test.util.selenium.BaseArquilianRunner;
 import jakarta.faces.annotation.FlowMap;
 import jakarta.inject.Inject;
@@ -41,29 +42,13 @@ import static org.junit.Assert.assertTrue;
  * Tests the availability of the flow map via injection
  *
  */
-@RunWith(BaseArquilianRunner.class)
-public class Spec1386IT {
-
-    @ArquillianResource
-    private URL webUrl;
-    private WebClient webClient;
-
-    @Deployment(testable = false)
-    public static WebArchive createDeployment() {
-        return create(ZipImporter.class, getProperty("finalName") + ".war")
-                .importFrom(new File("target/" + getProperty("finalName") + ".war"))
-                .as(WebArchive.class);
-    }
+public class Spec1386IT extends ITBaseHTMLUnitOnly {
 
     @Before
     public void setUp() {
         webClient = new WebClient();
     }
 
-    @After
-    public void tearDown() {
-        webClient.close();
-    }
 
     /**
      * @see Inject

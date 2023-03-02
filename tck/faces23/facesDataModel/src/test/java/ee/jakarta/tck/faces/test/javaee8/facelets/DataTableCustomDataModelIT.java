@@ -17,21 +17,17 @@
 
 package ee.jakarta.tck.faces.test.javaee8.facelets;
 
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import ee.jakarta.tck.faces.test.util.arquillian.ITBaseAll;
+import jakarta.faces.component.html.HtmlDataTable;
+import jakarta.faces.model.FacesDataModel;
+import org.junit.Test;
+
 import static java.util.regex.Pattern.matches;
 import static org.junit.Assert.assertTrue;
 
-import org.jboss.arquillian.junit.Arquillian;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
-import jakarta.faces.component.html.HtmlDataTable;
-import jakarta.faces.model.FacesDataModel;
-
-@RunWith(Arquillian.class)
-public class DataTableCustomDataModelIT extends ITBase {
+public class DataTableCustomDataModelIT extends ITBaseAll {
 
     /**
      * @see HtmlDataTable

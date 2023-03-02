@@ -24,12 +24,11 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
 import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
 
-import ee.jakarta.tck.faces.test.util.arquillian.ITBase;
-import jakarta.faces.component.UICommand;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import jakarta.faces.component.behavior.AjaxBehavior;
 import jakarta.faces.component.html.HtmlCommandButton;
 
-public class Issue2421IT extends ITBase {
+public class Issue2421IT extends ITBaseHTMLUnitOnly {
 
     /**
      * This test verifies that an attribute named 'disabled' can be successfully updated

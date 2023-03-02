@@ -32,7 +32,11 @@ public class BaseArquilianRunner extends Arquillian {
 
     @Override
     protected boolean isIgnored(FrameworkMethod child) {
-        if("true".equals(System.getProperty("test.selenium"))) {
+        String testSeleniumProp = System.getProperty("test.selenium");
+        boolean seleniumTestRequested = null != testSeleniumProp &&
+                (testSeleniumProp.equalsIgnoreCase("true") ||
+                        testSeleniumProp.isEmpty());
+        if(seleniumTestRequested) {
             return true;
         }
         return super.isIgnored(child);

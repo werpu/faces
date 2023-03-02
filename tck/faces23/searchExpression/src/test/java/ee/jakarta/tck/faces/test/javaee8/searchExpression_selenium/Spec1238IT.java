@@ -17,7 +17,7 @@
 package ee.jakarta.tck.faces.test.javaee8.searchExpression_selenium;
 
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.ExtendedWebDriver;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import jakarta.faces.component.search.SearchKeywordResolver;
@@ -28,7 +28,7 @@ import org.openqa.selenium.WebElement;
 
 import java.time.Duration;
 
-public class Spec1238IT extends BaseITNG {
+public class Spec1238IT extends ITBaseWebDriverOnly {
 
     /**
      * @see SearchKeywordResolver

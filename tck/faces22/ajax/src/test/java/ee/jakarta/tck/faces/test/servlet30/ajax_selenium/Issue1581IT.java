@@ -16,7 +16,7 @@
 
 package ee.jakarta.tck.faces.test.servlet30.ajax_selenium;
 
-import ee.jakarta.tck.faces.test.util.selenium.BaseITNG;
+import ee.jakarta.tck.faces.test.util.selenium.ITBaseWebDriverOnly;
 import ee.jakarta.tck.faces.test.util.selenium.WebPage;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -29,7 +29,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 
-public class Issue1581IT extends BaseITNG {
+public class Issue1581IT extends ITBaseWebDriverOnly {
 
     /**
      * This test verifies correct function of SelectManyCheckbox in a Composite

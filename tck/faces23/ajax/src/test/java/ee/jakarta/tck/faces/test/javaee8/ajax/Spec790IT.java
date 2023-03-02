@@ -16,47 +16,19 @@
 
 package ee.jakarta.tck.faces.test.javaee8.ajax;
 
-import static java.lang.System.getProperty;
-import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
-import static org.junit.Assert.assertTrue;
-
-import java.io.File;
-import java.net.URL;
-
-import ee.jakarta.tck.faces.test.util.selenium.BaseArquilianRunner;
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.test.api.ArquillianResource;
-import org.jboss.shrinkwrap.api.importer.ZipImporter;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
 import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
-import com.gargoylesoftware.htmlunit.html.HtmlForm;
-import com.gargoylesoftware.htmlunit.html.HtmlInput;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
+import com.gargoylesoftware.htmlunit.html.*;
+import ee.jakarta.tck.faces.test.util.htmlunit.ITBaseHTMLUnitOnly;
 import ee.jakarta.tck.faces.test.util.htmlunit.IgnoringIncorrectnessListener;
-
 import jakarta.faces.application.NavigationHandler;
 import jakarta.faces.application.StateManager;
+import org.junit.Before;
+import org.junit.Test;
 
-@RunWith(BaseArquilianRunner.class)
-public class Spec790IT {
+import static org.junit.Assert.assertTrue;
 
-    @ArquillianResource
-    private URL webUrl;
-    private WebClient webClient;
 
-    @Deployment(testable = false)
-    public static WebArchive createDeployment() {
-        return create(ZipImporter.class, getProperty("finalName") + ".war")
-                .importFrom(new File("target/" + getProperty("finalName") + ".war"))
-                .as(WebArchive.class);
-    }
+public class Spec790IT extends ITBaseHTMLUnitOnly {
 
     @Before
     public void setUp() {
@@ -147,11 +119,6 @@ public class Spec790IT {
         HtmlInput form2ViewState = form2.getInputByName("jakarta.faces.ViewState");
         assertTrue(!form1ViewState.getValueAttribute().isEmpty());
         assertTrue(!form2ViewState.getValueAttribute().isEmpty());
-    }
-
-    @After
-    public void tearDown() {
-        webClient.close();
     }
 
 }

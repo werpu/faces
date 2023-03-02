@@ -16,15 +16,15 @@
 
 package ee.jakarta.tck.faces.test.javaee7.cdibeanvalidator.cdibeanvalidator;
 
-import java.io.Serializable;
-import java.util.Date;
-
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.validator.ValidatorException;
 import jakarta.inject.Named;
+
+import java.io.Serializable;
+import java.util.Date;
 
 @Named
 @SessionScoped
